@@ -92,7 +92,12 @@ const updateProfile = (req, res, next) => {
       }
       return res.setHeader('content-type', 'application/json').status(HTTP_STATUS_OK).send(result);
     })
-    .catch(next);
+    .catch((err) => {
+      if (err.name === 'MongoServerError' || err.code === 11000) {
+        next(new ConflictError('Такой email уже существует'));
+      }
+      next(err);
+    });
 };
 
 module.exports = {

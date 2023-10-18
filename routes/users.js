@@ -40,9 +40,4 @@ userRouter.patch(
   updateProfile,
 );
 
-// несуществующий путь
-userRouter.patch('*', (req, res) => {
-  return res.setHeader('content-type', 'application/json').status(HTTP_STATUS_NOT_FOUND).send({ message: 'Not found' });
-});
-
 module.exports = userRouter;
