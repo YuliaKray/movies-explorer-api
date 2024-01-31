@@ -5,14 +5,6 @@ const ForbiddenError = require('../errors/ForbiddenError'); // 403
 
 const movie = require('../models/movie');
 
-// const getMovies = (req, res, next) => {
-//   return movie.find({})
-//     .then((result) => {
-//       return res.status(HTTP_STATUS_OK).send(result);
-//     })
-//     .catch(next);
-// };
-
 const getMovies = (req, res, next) => {
   const user = req.user._id;
 

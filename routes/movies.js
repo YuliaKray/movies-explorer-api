@@ -43,16 +43,3 @@ movieRouter.delete(
 
 module.exports = movieRouter;
 
-// {
-//   "country": "Россия",
-//   "director": "Олег Трофим",
-//   "duration": "90",
-//   "year": "2021",
-//   "description": "Про Игоря Грома",
-//   "image": "https://hd.kinopoisk.ru/film/46020c592c198b0c95b955a396fb7b25",
-//   "trailerLink": "https://hd.kinopoisk.ru/film/46020c592c198b0c95b955a396fb7b25",
-//   "nameRU": "Майор Гром",
-//   "nameEN": "Mayor Grom",
-//   "thumbnail": "https://hd.kinopoisk.ru/film/46020c592c198b0c95b955a396fb7b25",
-//   "movieId": "1"
-// }

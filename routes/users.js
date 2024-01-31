@@ -1,6 +1,6 @@
 const { celebrate, Joi } = require('celebrate');
 const userRouter = require('express').Router();
-const { HTTP_STATUS_NOT_FOUND } = require('http2').constants; // 404
+// const { HTTP_STATUS_NOT_FOUND } = require('http2').constants; // 404
 const auth = require('../middlewares/auth');
 
 const {
@@ -35,8 +35,6 @@ userRouter.patch(
     body: Joi.object().keys({
       name: Joi.string().min(2).max(30),
       email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'ru'] } }),
-      // email: Joi.string().required().email({ minDomainSegments: 2,
-      // tlds: { allow: ['com', 'ru'] } }),
     }),
   }),
   updateProfile,
